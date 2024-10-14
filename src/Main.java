@@ -2,7 +2,11 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Monde monde = new Monde(100, 100, 0.5);
+        // CREATION JEU PONG
+        // Monde monde = new Monde(50, 50, 0.1);
+
+        // CREATION JEU TAQUIN
+        FrameTaquin frameTaquin = new FrameTaquin(3,3);
     }
 }
 
