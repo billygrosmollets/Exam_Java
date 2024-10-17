@@ -11,12 +11,13 @@ public class Cellule extends JPanel {
 
     // Constructeur
     public Cellule(Cellule[][] grille, int x, int y, int etatInitial) {
+        this.setPreferredSize(new Dimension(30, 30));
+
         this.grille = grille;
         this.x = x;
         this.y = y;
         this.etatActuel = etatInitial;
         this.setBackground(etatActuel == 1 ? Color.BLACK : Color.WHITE);
-        this.setMinimumSize(new Dimension(3, 3));
 
         // Ajouter un MouseListener pour détecter les clics sur la cellule
         this.addMouseListener(new MouseAdapter() {

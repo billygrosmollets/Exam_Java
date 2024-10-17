@@ -116,7 +116,6 @@ public class Monde extends JFrame {
 
     void initFrame(int nbRow, int nbCol) {
         this.setTitle("Jeu de la vie");
-        this.setSize(400, 400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         container = this.getContentPane();
         container.setLayout(new BorderLayout());
@@ -127,14 +126,15 @@ public class Monde extends JFrame {
         panel2 = new JPanel();
         panel2.setLayout(new FlowLayout());
 
-        // Ajout des boutons au panel
         panel2.add(start);
         panel2.add(stop);
         panel2.add(reset);
 
-        container.add(panel1, BorderLayout.CENTER);  // La grille au centre
-        container.add(panel2, BorderLayout.SOUTH);   // Les boutons en bas
+        container.add(panel1, BorderLayout.SOUTH);  // La grille au centre
+        container.add(panel2, BorderLayout.NORTH);   // Les boutons en bas
 
+        this.pack();
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 }
